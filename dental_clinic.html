@@ -1,0 +1,2718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dental Responsive Website.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap"
+      rel="stylesheet"
+    />git add dental_clinic.html
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap");
+
+      /* start: global styles */
+
+      :root {
+        --primary: #34332e;
+        --primary-bg: #259d55;
+        --secondary: #c0bfc0;
+        /* --tertiary: #FF0066; */
+        /* --tertiary: #13b0c4; */
+        --tertiary: rgb(58, 51, 51);
+        --gradient-angle: 45deg;
+        --text-white: #fff;
+        --text-color: #eee;
+
+        --bg-color: #09195d;
+        --bg-medium: #333;
+        --bg-dark: black;
+      }
+
+      body {
+        font-family: "Oranienbaum", serif;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.7;
+      }
+
+      * {
+        outline: none;
+      }
+
+      *:not(.slick-track):not(.slick-list) {
+        transition: 0.4s;
+      }
+
+      .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1,
+      h2 {
+        /* font-family: "Playfair Display", serif; */
+        font-weight: 800;
+      }
+
+      h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        z-index: 5;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: var(--tertiary);
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 300;
+      }
+
+      h5 {
+        font-size: 1rem;
+        font-family: "Playfair Display", serif;
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      .container .rounded {
+        border: none;
+        color: var(--text-color);
+        font-size: 20px;
+        /* border-radius: 20px; */
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+        padding: 7px 20px;
+        cursor: pointer;
+        /* border-radius: 50px 50px 5px 55px; */
+        background: linear-gradient(
+          45deg,
+          #259d55 0%,
+          #49c37a 30%,
+          #259d55 100%
+        );
+
+        background: -moz-linear-gradient(
+          45deg,
+          #259d55 0%,
+          #49c37a 30%,
+          #259d55 100%
+        );
+
+        background: -webkit-linear-gradient(
+          45deg,
+          #259d55 0%,
+          #49c37a 30%,
+          #259d55 100%
+        );
+
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0475D8", endColorstr="#C088E1", GradientType=1 );
+      }
+      .rounded {
+        border: none;
+        color: var(--text-color);
+        font-size: 20px;
+        /* border-radius: 20px; */
+        padding: 15px 20px;
+        cursor: pointer;
+        /* border-radius: 50px 50px 5px 55px; */
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+        background: hsla(208, 96%, 43%, 1);
+
+        background: linear-gradient(
+          45deg,
+          #259d55 0%,
+          #49c37a 30%,
+          #259d55 100%
+        );
+
+        background: -moz-linear-gradient(
+          45deg,
+          #259d55 0%,
+          #49c37a 30%,
+          #259d55 100%
+        );
+
+        background: -webkit-linear-gradient(
+          45deg,
+          #259d55 0%,
+          #49c37a 30%,
+          #259d55 100%
+        );
+
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0475D8", endColorstr="#C088E1", GradientType=1 );
+      }
+      .hero-text .rounded:hover {
+        background: var(--text-color);
+        color: var(--tertiary);
+      }
+
+      /* for search button */
+      .hero-text .square {
+        border: none;
+        font-size: 20px;
+        padding: 15px 40px;
+        color: var(--tertiary);
+        /* border-radius: 5px 55px 50px 50px; */
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+      }
+      .square:hover {
+        border: 2px solid var(--primary);
+
+        color: var(--text-color);
+        background: var(--primary);
+      }
+      p.large-paragraph {
+        font-size: 1.25rem;
+        font-weight: 300;
+      }
+
+      /* end: global styles */
+
+      /* start: header styles */
+      #header-hero-container {
+        min-height: 550px;
+        height: calc(100vh);
+        /* position: relative; */
+      }
+      .top_header {
+        background: var(--primary);
+        /* border-radius: 5rem; */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .toper-social-icon ul,
+      .location {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-right: 10px;
+      }
+
+      .toper-social-icon ul li {
+        padding: 1rem 1rem;
+        list-style: none;
+      }
+      .toper-social-icon ul li a {
+        color: var(--text-color);
+        border: 1px solid;
+        padding: 10px 15px;
+        border-radius: 50%;
+      }
+      .top_header .location .address,
+      .top_header .location .opening,
+      .top_header .location .contact_pho {
+        padding-right: 4rem;
+        color: var(--text-color);
+      }
+      header {
+        background: transparent;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid hsla(314, 99%, 28%, 0.2);
+
+        /* position: fixed; */
+        width: 100%;
+        z-index: 3;
+      }
+
+      #logo img {
+        height: 70px;
+        width: 120px;
+      
+      }
+
+      .hamburger-menu {
+        background-color: var(--tertiary);
+        border: 1px solid var(--tertiary);
+        padding: 3px 5px;
+        width: 30px;
+        cursor: pointer;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .hamburger-menu .strip {
+        display: block;
+        height: 3px;
+        background-color: var(--text-white);
+        margin: 6px 0;
+      }
+
+      header ul {
+        list-style-type: none;
+      }
+
+      header ul li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+
+      #close-flyout {
+        display: none;
+      }
+
+      /*  */
+      header ul li a {
+        color: var(--tertiary);
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      header ul li a:hover {
+        content: "";
+        width: 10px;
+        height: 2px;
+        color: var(--tertiary);
+      }
+
+      header ul li a.active {
+        color: var(--primary);
+      }
+
+      header ul li a:hover {
+        color: var(--tertiary);
+        border-bottom: 1px solid hsla(314, 99%, 28%, 0.2);
+      }
+      /* end: header styles */
+
+      /* start: hero section styles */
+      #hero {
+        /* padding: 10px; */
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            to right,
+            rgb(25, 28, 33),
+            rgba(6, 9, 12, 0.75),
+            rgba(16, 21, 30, 0.3),
+            rgba(47, 53, 62, 0.2)
+          ),
+          url("https://cdn.pixabay.com/photo/2024/04/30/07/18/dentist-8729627_1280.jpg");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .hero-text h1,
+      .hero-text p,
+      .hero-text button {
+        opacity: 0;
+        animation-fill-mode: forwards;
+      }
+      /* to make tect in center or left side */
+      #hero .hero-text {
+        position: relative;
+        width: 1000px;
+        text-align: center;
+      }
+      #hero .hero-text::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        margin-left: -400px;
+        background-image: url("./star.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #hero .hero-text h1 {
+        animation: slideInFromBottom 1s ease-out 0.2s forwards;
+        margin: 0 auto;
+        font-size: 50px;
+        color: var(--text-color);
+      }
+      #hero .hero-text span {
+        color: var(--primary-bg);
+      }
+      #hero .hero-text p {
+        color: var(--text-color);
+        line-height: 1.5em;
+        font-weight: 300;
+        font-size: 1rem;
+        animation: slideInFromBottom 1s ease-out 0.4s forwards;
+      }
+      .hero-text button.rounded {
+        animation: slideInFromBottom 1s ease-out 0.6s forwards;
+      }
+
+      .hero-text button.square {
+        animation: slideInFromBottom 1s ease-out 0.8s forwards;
+      }
+      /* Keyframes for slide-in animation */
+      @keyframes slideInFromBottom {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      #header-hero-container .social-icon ul {
+        display: flex;
+        justify-content: flex-start;
+      }
+      #header-hero-container .social-icon ul li {
+        list-style: none;
+        margin-right: 1.8rem;
+        margin-top: -10rem;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      /* Class to make icons visible */
+      .social-icon ul li.visible {
+        opacity: 1;
+        transform: translateY(0); /*  add a small slide-up effect */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Adjust timing as needed */
+      }
+      #header-hero-container .social-icon ul li a {
+        color: var(--text-color);
+        font-size: 25px;
+        background: var(--tertiary);
+        border-radius: 50%;
+        padding: 10px 20px;
+        box-shadow: 0 2rem 2rem 0 rgba(35, 34, 34, 0.597);
+      }
+
+      /* end hero section styles */
+      /* start  feature section style*/
+      .features {
+        /* padding-top: 10rem; */
+        margin-bottom: -100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        
+      }
+
+      .feature-item {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        color: var(--primary);
+        min-height: 200px;
+      }
+      .feature-item:nth-child(3) {
+        color: var(--text-white);
+      }
+
+      .feature-color1 {
+        background-color: var(--text-color);
+      }
+
+      .feature-color2 {
+        background-color: var(--primary-bg);
+      }
+
+      .feature-content {
+        max-width: 300px;
+      }
+
+      .feature-content i {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+
+      .feature-content h3 {
+        margin: 10px 0;
+        font-size: 1.5em;
+      }
+
+      .feature-content p {
+        font-size: 1em;
+      }
+      /* end feature */
+
+      /* start: most_exciting styles */
+      #most_exciting {
+        padding: 7rem 0;
+        background: var(--text-color);
+        text-align: center;
+        margin: 5rem 0;
+      }
+      #most_exciting .flex h2 {
+        color: var(--tertiary);
+        position: relative;
+
+        /* margin-top: 150px; */
+        text-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+      }
+      #most_exciting::before {
+        content: "";
+        position: absolute;
+        margin-left: -250px;
+        margin-top: -120px;
+        font-size: 170px;
+
+        width: 0;
+        height: 0;
+        left: -10px;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 80px solid #f1e194;
+        z-index: 0;
+        animation: triangle-spin infinite 20s linear;
+      }
+      @keyframes triangle-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .flex_container {
+        display: flex;
+        /* margin: 4rem 1.5rem; */
+        background: var(--text-color);
+        padding: 2rem 4rem;
+      }
+
+      .flex_container > .most_exciting_card {
+        width: 100%;
+        padding: 3rem 2rem;
+        border-radius: 100px 100px;
+      }
+      #most_exciting h4 {
+        color: var(--bg-medium);
+        margin-top: 1rem;
+      }
+      #most_exciting span.fas {
+        color: var(--tertiary);
+        font-size: 35px;
+        /* background: var(--text-color); */
+        /* border: 1px solid var(--primary-bg); */
+        padding: 1.5rem 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 3rem;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+      }
+
+      #most_exciting span.fas:hover {
+        background: var(--primary-bg);
+        color: var(--text-color);
+      }
+      .flex_container > .most_exciting_card {
+        border: 1px solid var(--text-white);
+        margin: 1rem 1rem;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .flex_container > .most_exciting_card:nth-child(2) {
+        background: var(--primary-bg);
+        color: white;
+      }
+      .flex_container > .most_exciting_card:nth-child(2)>span.fas  {
+        background:var(--text-white)
+      }
+      /* end: most_exciting styles */
+
+      /* about section */
+
+      .about {
+        display: flex;
+        align-items: center;
+      }
+
+      .left-side {
+        width: 50%;
+        margin: 2rem;
+      }
+
+      .right-side {
+        width: 50%;
+        padding-left: 20px;
+      }
+      .right-side::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url("./star.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto;
+        gap: 10px;
+      }
+
+      .image-grid-item {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .image-grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        /* box-shadow: var(--); */
+      }
+
+      .image-grid-item.large {
+        grid-column: 1;
+        grid-row: 1;
+        height: 300px;
+      }
+
+      .image-grid-item.small {
+        grid-column: 2;
+        grid-row: 1;
+        height: 300px;
+      }
+
+      .image-grid-item.full {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        height: 200px;
+      }
+
+      /* #about .left-side {
+        width: 70%;
+        height: 70%;
+        background-image: url("https://cdn.pixabay.com/photo/2024/06/28/04/30/preventive-dentistry-8858477_1280.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 10;
+        border-radius: 10px 100px;
+        margin-left: 100px;
+      
+      }
+      #about .left-side::before{
+        content: '';
+       position: absolute;
+       font-size: 100px;
+        width:40%;
+        height: 40%; 
+        border-radius: 30%;
+        background-image: url("https://images.unsplash.com/photo-1685625971422-6fdc6c5129d6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXxZSDJXd3hjVjVYSXx8ZW58MHx8fHx8");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: -130px;
+        z-index: -0;
+      }
+      #about .left-side::after{
+        content: '';
+       position: absolute;
+        width:60%;
+        height: 40%; 
+        border-radius: 30px;
+        background-image: url("https://images.unsplash.com/photo-1511766443616-f41c8cadf015?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: -100px;
+        bottom: -100px;
+        z-index: 0;
+      } */
+
+      /* end about section */
+
+      /* start: places styles */
+      #places {
+        /* background: linear-gradient(
+          var(--gradient-angle),
+          hsla(315, 76%, 92%, 0.9),
+          var(--text-color)
+        ); */
+
+        background: url("./large-triangles.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 4rem 0 6rem;
+      }
+      #places h2 {
+        color: var(--tertiary);
+      }
+
+      #places p.large-paragraph {
+        margin-bottom: 4rem;
+        color: var(--bg-dark);
+      }
+
+      #places .all-image {
+        padding-bottom: 75px;
+        position: relative;
+        /* margin-top: -295px; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+      .all-image .single-img {
+        position: relative;
+        /* margin-bottom: 20px; */
+        overflow: hidden;
+      }
+      .all-image .single-img .img-thumb {
+        height: 310px;
+      }
+      .all-image .single-img .img-thumb img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+      }
+
+      .all-image .single-img .img-thumb h2 {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        font-size: 30px;
+        transform: translate(-50%, -50%);
+        color: var(--primary);
+        margin: 0;
+        text-align: center;
+        background: rgb(217, 216, 216);
+        padding: 1rem;
+        border-radius: 10px;
+      }
+      .all-image .single-img .img-hover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: rgba(1, 18, 34, 0.6);
+        transform: translateY(50%);
+        transition: 0.5s;
+        opacity: 0;
+        overflow: hidden;
+      }
+      .all-image .single-img .img-hover .title {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        transform: translateY(-50%);
+      }
+      .all-image .single-img .img-hover h3 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 2rem 2rem;
+      }
+      .all-image .single-img:hover .img-hover {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+      .all-image .single-img:hover .img-thumb h2 {
+        display: none;
+      }
+      /* end: places styles */
+
+      /* start: services styles */
+      #services {
+        /* background: rgb(183, 162, 43);
+        background: radial-gradient(
+          circle,
+          rgb(155, 158, 155) 1%,
+          rgba(255, 255, 255, 1) 100%
+        ); */
+        background-image: url("https://images.unsplash.com/photo-1642844808996-f61389364b51?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA0fHxkZW50YWx8ZW58MHx8MHx8fDA%3D");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 2rem;
+        padding: 6rem 0;
+        margin-bottom: 4rem;
+      }
+      #services h2 {
+        text-align: left;
+        color: var(--text-white);
+        position: relative;
+      }
+      #services h2::after {
+        width: 100px;
+        height: 20px;
+        color: var(--tertiary);
+        position: absolute;
+      }
+      #services p {
+        padding-bottom: 2rem;
+        color: var(--text-white);
+      }
+      #services .flex {
+        flex-wrap: wrap;
+      }
+      #services .flex > div {
+        width: 30%;
+        margin-bottom: 4rem;
+        padding: 1rem 0.5rem 3rem 0.5rem;
+        color: var(--text-color);
+        background: rgba(249, 247, 247, 0.5);
+        box-shadow: 0 8px 32px 0 rgba(244, 245, 247, 0.37);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+      #services .flex > div:nth-child(even) {
+        background-color: rgb(214, 226, 214) !important;
+      }
+
+      #services .flex > div .fas {
+        background: rgb(160, 159, 159);
+        border-radius: 50%;
+        padding: 1rem 0.2rem;
+        font-size: 30px;
+        float: left;
+        margin-top: 15px;
+        width: 20%;
+        text-align: center;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+      }
+
+      #services .flex > div .services-card-right {
+        float: right;
+        width: 75%;
+      }
+      #services .flex > div .services-card-right h3 {
+        font-size: 30px;
+        color: var(--bg-medium);
+      }
+      #services .flex > div .services-card-right p {
+        font-size: 18px;
+        color: var(--bg-medium);
+      }
+
+      #services .flex > div a {
+        color: var(--text-white);
+        background-color: var(--primary);
+        padding: 0.7rem 1rem;
+        text-decoration: none;
+      }
+
+      #services .flex > div a:hover {
+        text-decoration: underline;
+      }
+      /* end: services styles */
+
+      /* start: testimonials styles */
+
+      #testimonial {
+        position: relative;
+        margin: 7rem 7rem;
+        margin-bottom: 300px;
+        padding-bottom: 10rem;
+        text-align: center;
+      }
+
+      /* wave  */
+      /* .wrapper {
+      width: 100vw;
+      height: 500px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+      overflow: hidden;
+    } */
+
+      /* .wave {
+      width: 1000px;
+      height: 1025px;
+      position: absolute;
+      top: -25%;
+      left: 50%;
+      margin-left: -500px;
+      margin-top: -500px;
+      border-radius: 35%;
+      background: rgba(255, 255, 255, .75);
+      animation: wave 15s infinite linear;
+} */
+
+      @keyframes wave {
+        from {
+          transform: rotate(0deg);
+        }
+        from {
+          transform: rotate(360deg);
+        }
+      }
+      #testimonial h2 {
+        padding-bottom: 1rem;
+      }
+      .testim {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        -webkit-transform: translatey(-50%);
+        -moz-transform: translatey(-50%);
+        -ms-transform: translatey(-50%);
+        -o-transform: translatey(-50%);
+        transform: translatey(-50%);
+      }
+
+      .testim .wrap {
+        position: relative;
+        width: 100%;
+        max-width: 1020px;
+        padding: 40px 20px;
+        margin: auto;
+      }
+
+      .testim .arrow {
+        display: block;
+        position: absolute;
+        color: #333;
+        cursor: pointer;
+        font-size: 2em;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        padding: 5px;
+        z-index: 22222222;
+      }
+
+      .testim .arrow:before {
+        cursor: pointer;
+      }
+
+      .testim .arrow:hover {
+        color: green;
+      }
+
+      .testim .arrow.left {
+        left: 70px;
+      }
+
+      .testim .arrow.right {
+        right: 70px;
+      }
+
+      .testim .dots {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 60px;
+        left: 0;
+        display: block;
+        z-index: 3333;
+        height: 12px;
+      }
+
+      .testim .dots .dot {
+        list-style-type: none;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid green;
+        margin: 0 10px;
+        cursor: pointer;
+        -webkit-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+      }
+
+      .testim .dots .dot.active,
+      .testim .dots .dot:hover {
+        background: green;
+        border-color: green;
+      }
+
+      .testim .dots .dot.active {
+        -webkit-animation: testim-scale 0.5s ease-in-out forwards;
+        -moz-animation: testim-scale 0.5s ease-in-out forwards;
+        -ms-animation: testim-scale 0.5s ease-in-out forwards;
+        -o-animation: testim-scale 0.5s ease-in-out forwards;
+        animation: testim-scale 0.5s ease-in-out forwards;
+      }
+
+      .testim .cont {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .testim .cont > div {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 0 70px 0;
+        opacity: 0;
+      }
+
+      .testim .cont > div.inactive {
+        opacity: 1;
+      }
+
+      .testim .cont > div.active {
+        position: relative;
+        opacity: 1;
+      }
+
+      .testim .cont div .img img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border-radius: 50%;
+      }
+
+      .testim .cont div h2 {
+        color: var(--primary);
+        font-size: 1em;
+        margin: 15px 0;
+      }
+
+      .testim .cont div p {
+        font-size: 1.15em;
+        color: #333;
+        width: 70%;
+        margin: auto;
+      }
+
+      .testim .cont div.active .img img {
+        -webkit-animation: testim-show 0.5s ease-in-out forwards;
+        -moz-animation: testim-show 0.5s ease-in-out forwards;
+        -ms-animation: testim-show 0.5s ease-in-out forwards;
+        -o-animation: testim-show 0.5s ease-in-out forwards;
+        animation: testim-show 0.5s ease-in-out forwards;
+      }
+
+      .testim .cont div.active h2 {
+        -webkit-animation: testim-content-in 0.4s ease-in-out forwards;
+        -moz-animation: testim-content-in 0.4s ease-in-out forwards;
+        -ms-animation: testim-content-in 0.4s ease-in-out forwards;
+        -o-animation: testim-content-in 0.4s ease-in-out forwards;
+        animation: testim-content-in 0.4s ease-in-out forwards;
+      }
+
+      .testim .cont div.active p {
+        -webkit-animation: testim-content-in 0.5s ease-in-out forwards;
+        -moz-animation: testim-content-in 0.5s ease-in-out forwards;
+        -ms-animation: testim-content-in 0.5s ease-in-out forwards;
+        -o-animation: testim-content-in 0.5s ease-in-out forwards;
+        animation: testim-content-in 0.5s ease-in-out forwards;
+      }
+
+      .testim .cont div.inactive .img img {
+        -webkit-animation: testim-hide 0.5s ease-in-out forwards;
+        -moz-animation: testim-hide 0.5s ease-in-out forwards;
+        -ms-animation: testim-hide 0.5s ease-in-out forwards;
+        -o-animation: testim-hide 0.5s ease-in-out forwards;
+        animation: testim-hide 0.5s ease-in-out forwards;
+      }
+
+      .testim .cont div.inactive h2 {
+        -webkit-animation: testim-content-out 0.4s ease-in-out forwards;
+        -moz-animation: testim-content-out 0.4s ease-in-out forwards;
+        -ms-animation: testim-content-out 0.4s ease-in-out forwards;
+        -o-animation: testim-content-out 0.4s ease-in-out forwards;
+        animation: testim-content-out 0.4s ease-in-out forwards;
+      }
+
+      .testim .cont div.inactive p {
+        -webkit-animation: testim-content-out 0.5s ease-in-out forwards;
+        -moz-animation: testim-content-out 0.5s ease-in-out forwards;
+        -ms-animation: testim-content-out 0.5s ease-in-out forwards;
+        -o-animation: testim-content-out 0.5s ease-in-out forwards;
+        animation: testim-content-out 0.5s ease-in-out forwards;
+      }
+
+      @-webkit-keyframes testim-scale {
+        0% {
+          -webkit-box-shadow: 0px 0px 0px 0px #eee;
+          box-shadow: 0px 0px 0px 0px #eee;
+        }
+
+        35% {
+          -webkit-box-shadow: 0px 0px 10px 5px #eee;
+          box-shadow: 0px 0px 10px 5px #eee;
+        }
+
+        70% {
+          -webkit-box-shadow: 0px 0px 10px 5px #ea830e;
+          box-shadow: 0px 0px 10px 5px #ea830e;
+        }
+
+        100% {
+          -webkit-box-shadow: 0px 0px 0px 0px #ea830e;
+          box-shadow: 0px 0px 0px 0px #ea830e;
+        }
+      }
+
+      @-moz-keyframes testim-scale {
+        0% {
+          -moz-box-shadow: 0px 0px 0px 0px #eee;
+          box-shadow: 0px 0px 0px 0px #eee;
+        }
+
+        35% {
+          -moz-box-shadow: 0px 0px 10px 5px #eee;
+          box-shadow: 0px 0px 10px 5px #eee;
+        }
+
+        70% {
+          -moz-box-shadow: 0px 0px 10px 5px #ea830e;
+          box-shadow: 0px 0px 10px 5px #ea830e;
+        }
+
+        100% {
+          -moz-box-shadow: 0px 0px 0px 0px #ea830e;
+          box-shadow: 0px 0px 0px 0px #ea830e;
+        }
+      }
+
+      @-ms-keyframes testim-scale {
+        0% {
+          -ms-box-shadow: 0px 0px 0px 0px #eee;
+          box-shadow: 0px 0px 0px 0px #eee;
+        }
+
+        35% {
+          -ms-box-shadow: 0px 0px 10px 5px #eee;
+          box-shadow: 0px 0px 10px 5px #eee;
+        }
+
+        70% {
+          -ms-box-shadow: 0px 0px 10px 5px #ea830e;
+          box-shadow: 0px 0px 10px 5px #ea830e;
+        }
+
+        100% {
+          -ms-box-shadow: 0px 0px 0px 0px #ea830e;
+          box-shadow: 0px 0px 0px 0px #ea830e;
+        }
+      }
+
+      @-o-keyframes testim-scale {
+        0% {
+          -o-box-shadow: 0px 0px 0px 0px #eee;
+          box-shadow: 0px 0px 0px 0px #eee;
+        }
+
+        35% {
+          -o-box-shadow: 0px 0px 10px 5px #eee;
+          box-shadow: 0px 0px 10px 5px #eee;
+        }
+
+        70% {
+          -o-box-shadow: 0px 0px 10px 5px #ea830e;
+          box-shadow: 0px 0px 10px 5px #ea830e;
+        }
+
+        100% {
+          -o-box-shadow: 0px 0px 0px 0px #ea830e;
+          box-shadow: 0px 0px 0px 0px #ea830e;
+        }
+      }
+
+      @keyframes testim-scale {
+        0% {
+          box-shadow: 0px 0px 0px 0px #eee;
+        }
+
+        35% {
+          box-shadow: 0px 0px 10px 5px #eee;
+        }
+
+        70% {
+          box-shadow: 0px 0px 10px 5px #ea830e;
+        }
+
+        100% {
+          box-shadow: 0px 0px 0px 0px #ea830e;
+        }
+      }
+
+      @-webkit-keyframes testim-content-in {
+        from {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      @-moz-keyframes testim-content-in {
+        from {
+          opacity: 0;
+          -moz-transform: translateY(100%);
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          -moz-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      @-ms-keyframes testim-content-in {
+        from {
+          opacity: 0;
+          -ms-transform: translateY(100%);
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      @-o-keyframes testim-content-in {
+        from {
+          opacity: 0;
+          -o-transform: translateY(100%);
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          -o-transform: translateY(0);
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes testim-content-in {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @-webkit-keyframes testim-content-out {
+        from {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        to {
+          opacity: 0;
+          -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+      }
+
+      @-moz-keyframes testim-content-out {
+        from {
+          opacity: 1;
+          -moz-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        to {
+          opacity: 0;
+          -moz-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+      }
+
+      @-ms-keyframes testim-content-out {
+        from {
+          opacity: 1;
+          -ms-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        to {
+          opacity: 0;
+          -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+      }
+
+      @-o-keyframes testim-content-out {
+        from {
+          opacity: 1;
+          -o-transform: translateY(0);
+          transform: translateY(0);
+        }
+
+        to {
+          opacity: 0;
+          transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+      }
+
+      @keyframes testim-content-out {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        to {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+      }
+
+      @-webkit-keyframes testim-show {
+        from {
+          opacity: 0;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        to {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @-moz-keyframes testim-show {
+        from {
+          opacity: 0;
+          -moz-transform: scale(0);
+          transform: scale(0);
+        }
+
+        to {
+          opacity: 1;
+          -moz-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @-ms-keyframes testim-show {
+        from {
+          opacity: 0;
+          -ms-transform: scale(0);
+          transform: scale(0);
+        }
+
+        to {
+          opacity: 1;
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @-o-keyframes testim-show {
+        from {
+          opacity: 0;
+          -o-transform: scale(0);
+          transform: scale(0);
+        }
+
+        to {
+          opacity: 1;
+          -o-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+
+      @keyframes testim-show {
+        from {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @-webkit-keyframes testim-hide {
+        from {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+
+        to {
+          opacity: 0;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+      }
+
+      @-moz-keyframes testim-hide {
+        from {
+          opacity: 1;
+          -moz-transform: scale(1);
+          transform: scale(1);
+        }
+
+        to {
+          opacity: 0;
+          -moz-transform: scale(0);
+          transform: scale(0);
+        }
+      }
+
+      @-ms-keyframes testim-hide {
+        from {
+          opacity: 1;
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+
+        to {
+          opacity: 0;
+          -ms-transform: scale(0);
+          transform: scale(0);
+        }
+      }
+
+      @-o-keyframes testim-hide {
+        from {
+          opacity: 1;
+          -o-transform: scale(1);
+          transform: scale(1);
+        }
+
+        to {
+          opacity: 0;
+          -o-transform: scale(0);
+          transform: scale(0);
+        }
+      }
+
+      @keyframes testim-hide {
+        from {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        to {
+          opacity: 0;
+          transform: scale(0);
+        }
+      }
+
+      @media all and (max-width: 300px) {
+        body {
+          font-size: 14px;
+        }
+      }
+
+      @media all and (max-width: 500px) {
+        .testim .arrow {
+          font-size: 1.5em;
+        }
+
+        .testim .cont div p {
+          line-height: 25px;
+        }
+      }
+
+      /* end: testimonials styles */
+
+      /* start: contact us styles */
+      #contact {
+        background: #f8f9fa;
+        padding: 4rem 0 8rem;
+      }
+
+      #contact h2 {
+        text-align: center;
+        margin-bottom: 4rem;
+        color: var(--tertiary);
+      }
+
+      
+
+      #form-container {
+        width: 58%;
+        background: var(--text-color);
+        padding: 3rem;
+        box-sizing: border-box;
+        box-shadow: 0 1rem 1rem 0 rgba(128, 2, 94, 0.1);
+        height: 0%;
+      }
+
+      #form-container h3 {
+        color: var(--bg-dark);
+        font-family: "Playfair Display", serif;
+        margin-bottom: 2rem;
+      }
+
+      #form-container label {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+      }
+
+      #form-container input,
+      #form-container textarea {
+        display: block;
+        border-radius: 10px;
+        border: .2px solid var(--primary);
+        padding: 10px;
+        /* background: var(--tertiary); */
+        width: 100%;
+        box-sizing: border-box;
+        height: 53px;
+        font-size: .8rem;
+      }
+
+      #form-container textarea {
+        height: 170px;
+        margin-bottom: 2rem;
+        resize: none;
+      }
+
+      #address-container {
+        width: 38%;
+        text-align: center;
+        background: radial-gradient(ellipse at right, var(--primary-bg) 0%, var(--text-color) 100% );
+        box-sizing: border-box;
+        box-shadow: 0 1rem 1rem 0 rgba(128, 2, 94, 0.1);
+        height: auto;
+        padding-top: 20%;
+      }
+
+      #address-container label {
+        font-weight: 700;
+        display: block;
+        margin-top: 2rem;
+        color: var(--tertiary);
+        font-size: 1.5rem;
+      }
+
+      #address-container label:first-child {
+        margin-top: 0;
+      }
+
+      #address-container address {
+        margin-bottom: 1.5rem;
+        font-style: normal;
+      }
+
+      #address-container a {
+        text-decoration: none;
+        color: var(--primary);
+      }
+
+      #address-container a:hover {
+        text-decoration: underline;
+      }
+      /* end: contact us styles */
+
+      /* start: footer styles */
+
+      .newsletter {
+        width: 100%;
+        padding: 80px 20px;
+        background: var(--secondary);
+        color: var(--text-white);
+      }
+
+      .headings h1 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        text-align: center;
+        color:var(--primary);
+      }
+
+      .newsletter-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .input-group {
+        display: flex;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .newsletter-input {
+        border-radius: 100px 0 0 100px;
+        padding: 10px 20px;
+        flex-grow: 1;
+        border: none;
+        min-height: 45px;
+        border: 1px solid var(--primary-bg);
+      }
+
+      .input-group-append {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-bg);
+        padding: 0 20px;
+        border-radius: 0 100px 100px 0;
+        color: var(--t);
+
+        cursor: pointer;
+        min-height: 45px;
+      }
+
+      .input-group-append:hover {
+        opacity: 0.8;
+      }
+
+      .footersection {
+        width: 100%;
+        padding: 70px 20px 20px;
+        background: var(--tertiary_background);
+        color: var(--text_primary);
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .footer-item {
+        flex: 1;
+        min-width: 250px;
+        margin: 10px;
+      }
+      .footer-item:nth-child(3){
+        padding-right: 2rem;
+      }
+
+      .footer-navlinks ul {
+        padding-left: 0;
+      }
+
+      .footer-navlinks li {
+        margin: 5px 0;
+        list-style: none;
+        padding-left: 3rem;
+      }
+
+      .footer-navlinks a {
+        color: var(--text_primary);
+        font-size: 1.2rem;
+        line-height: 1.6;
+        font-weight: 400;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+
+      .footer-item h3 {
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .footer-bottom {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .footer-bottom p {
+        color: var(--text_secondary);
+      }
+
+      .footer-bottom a {
+        color: var(--primary-bg)
+      }
+      @media (max-width: 768px) {
+        .newsletter-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .input-group {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .input-group-append {
+          border-radius: 0 0 100px 100px;
+          width: 100%;
+        }
+
+        .newsletter-input {
+          border-radius: 100px 100px 0 0;
+          margin-bottom: 10px;
+        }
+
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-item {
+          margin: 20px 0;
+        }
+      }
+
+      /* end: footer styles */
+
+      /* start: media queries */
+      @media (max-width: 991px) {
+        #logo {
+          /* top: 1px; */
+        }
+
+        #nav-toggle {
+          display: block;
+        }
+
+        nav ul {
+          position: fixed;
+          background: var(--text-white);
+          right: -100%;
+          top: 0;
+          margin: 0;
+          padding: 2rem;
+          height: 100%;
+          width: 300px;
+          box-sizing: border-box;
+          box-shadow: 5px 0 10px 3px #999;
+        }
+
+        #close-flyout {
+          position: absolute;
+          right: 2rem;
+          top: 1.5rem;
+          font-size: 30px;
+          color: #777;
+          cursor: pointer;
+          display: block;
+          line-height: 1;
+          margin: 0;
+        }
+
+        nav ul li {
+          display: block;
+          margin: 20px 0;
+        }
+
+        nav ul li:first-child {
+          margin-top: 50px;
+        }
+        nav ul li a {
+          font-size: 25px;
+          color: var(--bg-medium);
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+          color: var(--primary);
+        }
+      }
+
+      @media (max-width: 767px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.75rem;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        .large-paragraph {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+
+        .container {
+          max-width: 540px;
+        }
+
+        #hero .hero-text {
+          width: 400px;
+        }
+
+        #ideas .card {
+          width: 49%;
+        }
+
+        #the-best .flex > img {
+          display: none;
+        }
+
+        #the-best .flex > div {
+          width: 100%;
+        }
+
+        #testimonials-slider p {
+          font-size: 1.2rem;
+        }
+
+        #properties .container:before {
+          top: 2px;
+          font-size: 0.85rem;
+        }
+
+        #properties-slider a.slick-arrow {
+          font-size: 0.85rem;
+        }
+
+        #properties button.rounded {
+          width: 300px;
+        }
+
+        #services .flex > div {
+          width: 48%;
+        }
+
+        #contact .flex {
+          flex-wrap: wrap;
+        }
+
+        #form-container {
+          width: 100%;
+          padding: 2rem;
+        }
+
+        #address-container {
+          width: 100%;
+          margin-top: 2rem;
+        }
+
+        footer {
+          padding: 6rem 0;
+        }
+
+        footer .flex {
+          flex-wrap: wrap;
+        }
+
+        footer .flex > div {
+          width: 100%;
+          margin-top: 1rem;
+        }
+
+        footer .flex > div:first-child {
+          margin-top: 0;
+        }
+
+        footer .footer-about p {
+          font-size: 1rem;
+          width: 100%;
+        }
+
+        footer .footer-subscribe input {
+          width: 90%;
+        }
+
+        footer h5.follow-us {
+          margin-top: 2rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        #hero .hero-text {
+          width: 330px;
+        }
+
+        #ideas {
+          margin: 4rem 0 3rem;
+          padding: 0 0 3rem;
+        }
+
+        #ideas .card {
+          width: 100%;
+        }
+
+        #ideas p.large-paragraph {
+          width: 100%;
+        }
+
+        #most_exciting .flex {
+          display: block;
+        }
+
+        #most_exciting .flex > div {
+          width: 100%;
+          margin-top: 2rem;
+        }
+
+        #destination button.rounded {
+          width: 250px;
+        }
+
+        #services {
+          padding: 4rem 0 3rem;
+          margin: 4rem 0;
+        }
+
+        #services .flex > div {
+          width: 100%;
+        }
+
+        #testimonials {
+          margin-bottom: 4rem;
+        }
+
+        #testimonials-slider p {
+          font-size: 1rem;
+        }
+
+        #testimonials-slider .slick-arrow {
+          display: none !important;
+        }
+
+        #contact {
+          padding: 4rem 0;
+        }
+
+        #contact h2 {
+          margin-bottom: 2rem;
+        }
+
+        #form-container {
+          padding: 1.5rem;
+        }
+
+        footer {
+          padding: 4rem 0;
+        }
+      }
+
+      @media (max-width: 400px) {
+        #hero .hero-text {
+          max-width: 275px;
+          width: 100%;
+        }
+
+        #destination button.rounded {
+          max-width: 250px;
+          width: 100%;
+        }
+
+        nav ul {
+          width: 200px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header-hero-container">
+      <div class="top_header">
+        <div class="toper-social-icon">
+          <ul>
+            <li>
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+            </li>
+            <li>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+            </li>
+            <li>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="location">
+          <div class="address">
+            <i class="fas fa-address-card"> Melbourne, VIC</i>
+          </div>
+          <div class="opening">Monday-Friday 9.00-17.00</div>
+          <div class="contact_pho">
+            <i class="fa fa-phone"></i> 03 0000 0000
+          </div>
+        </div>
+      </div>
+      <header>
+        <div class="flex container">
+          <a id="logo" href="#"><img src="./dental_logo.png" alt="" /></a>
+          <nav>
+            <button id="nav-toggle" class="hamburger-menu">
+              <span class="strip"></span>
+              <span class="strip"></span>
+              <span class="strip"></span>
+            </button>
+
+            <ul id="nav-menu">
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#"> About</a></li>
+              <li><a href="#">Treatment</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Contact</a></li>
+              <li id="close-flyout"><span class="fas fa-times"></span></li>
+            </ul>
+          </nav>
+          <button class="rounded">Get A Quote</button>
+        </div>
+      </header>
+
+      <section id="hero">
+        <div class="hero-text">
+          <h1>
+            Welcome to <span>D</span>ental <span>R</span>epair
+            <span>C</span>linic
+          </h1>
+          <p>
+            At our clinic, we are dedicated to providing exceptional dental care
+            in a comfortable and welcoming environment. Our team of experienced
+            professionals is committed to helping you achieve and maintain a
+            healthy, beautiful smile.
+          </p>
+          <button class="rounded">Get Started</button>
+          <button class="square">Search</button>
+        </div>
+      </section>
+    </div>
+    <!-- feature -->
+    <section class="features">
+      <div class="feature-item feature-color1">
+        <div class="feature-content">
+          <i class="fas fa-check-circle"></i>
+          <h3>Quality Care</h3>
+          <p>
+            Experience exceptional dental care with our skilled and
+            compassionate team, dedicated to your oral health and comfort.
+          </p>
+        </div>
+      </div>
+      <div class="feature-item feature-color1">
+        <div class="feature-content">
+          <i class="fas fa-user-md"></i>
+          <h3>Experienced Team</h3>
+          <p>
+            Our team of highly trained professionals brings years of expertise
+            to provide you with the best dental treatments.
+          </p>
+        </div>
+      </div>
+      <div class="feature-item feature-color2">
+        <div class="feature-content">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Advanced Technology</h3>
+          <p>
+            Utilizing state-of-the-art dental technology, we ensure precise and
+            effective treatments for optimal results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="most_exciting">
+      <div class="most_exciting_title">
+        <h2>What Services You Get</h2>
+        <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+      </div>
+      <div class="container">
+        <div class="flex">
+          <div class="flex_container">
+            <div class="most_exciting_card">
+              <span class="fas fa-check-circle"></span>
+              <h4>Cleaning,Filling</h4>
+              <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+            </div>
+            <div class="most_exciting_card">
+              <span class="fas fa-user-md"></span>
+              <h4>Orthodontics</h4>
+              <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+            </div>
+
+            <div class="most_exciting_card">
+              <span class="fas fa-tooth"></span>
+              <h4>Implants</h4>
+              <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+            </div>
+            <div class="most_exciting_card">
+              <span class="fas fa-heartbeat"></span>
+              <h4>Digital Smile Design</h4>
+              <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="left-side">
+        <div class="image-grid">
+          <div class="image-grid-item large">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1681966936455-3a857b77f967?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI1fHxkZW50YWx8ZW58MHx8MHx8fDA%3D"
+              alt="Image 1"
+            />
+          </div>
+          <div class="image-grid-item small">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1677943001704-92fd26a28dc4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE3fHxkZW50YWx8ZW58MHx8MHx8fDA%3D"
+              alt="Image 2"
+            />
+          </div>
+          <div class="image-grid-item full">
+            <img
+              src="https://images.unsplash.com/photo-1511766443616-f41c8cadf015?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 3"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <h2>About Us</h2>
+        <p>
+          At [Detal Repair Clinic, our mission is to provide comprehensive
+          dental care with a focus on patient comfort and satisfaction. Our
+          experienced team of dentists and staff are dedicated to helping you
+          achieve optimal oral health through personalized care and
+          state-of-the-art technology. We understand that every patient is
+          unique, and we strive to create a welcoming and supportive environment
+          where you can feel confident in the care you receive. From preventive
+          services to advanced treatments, we are here to support your dental
+          health journey every step of the way. Thank you for choosing Detal
+          Repair Clinic as your trusted dental care provider.
+        </p>
+        <button class="rounded">Learn More</button>
+      </div>
+    </section>
+
+    <section id="places">
+      <div class="container">
+        <h2>Available Treatment</h2>
+        <p class="large-paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima
+          neque tempora reiciendis.
+        </p>
+
+        <div class="all-image">
+          <div class="single-img">
+            <div class="img-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1667133295352-ef4c83620e8e?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h2>Teeth Whitening</h2>
+            </div>
+
+            <div class="img-hover">
+              <div class="title">
+                <h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                  minima neque tempora reiciendis.
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-img">
+            <div class="img-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1551601651-bc60f254d532?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h2>Dental Implants</h2>
+            </div>
+
+            <div class="img-hover">
+              <div class="title">
+                <h3>
+                  Lorem Ipsum Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Minus minima neque tempora reiciendis.
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-img">
+            <div class="img-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1660300110546-3b39e353b672?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHZlbmVlciUyMGluJTIwdGVldGh8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+              <h2>Veneers</h2>
+            </div>
+
+            <div class="img-hover">
+              <div class="title">
+                <h3>
+                  Lorem Ipsum Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Minus minima neque tempora reiciendis.
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-img">
+            <div class="img-thumb">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1681966904317-cb3c212ff45a?q=80&w=2077&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h2>Invisalign</h2>
+            </div>
+
+            <div class="img-hover">
+              <div class="title">
+                <h3>
+                  Lorem Ipsum Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Minus minima neque tempora reiciendis.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="single-img">
+            <div class="img-thumb">
+              <img
+                src="https://images.unsplash.com/photo-1593022356769-11f762e25ed9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <h2>Root Canal Therapy</h2>
+            </div>
+
+            <div class="img-hover">
+              <div class="title">
+                <h3>
+                  Lorem Ipsum Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Minus minima neque tempora reiciendis.
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="single-img">
+            <div class="img-thumb">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1675968758591-c7a17025b796?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGNyb3duJTIwYW5kJTIwYnJpZGdlcyUyMGluJTIwdGVldGh8ZW58MHx8MHx8fDA%3D"
+                alt=""
+              />
+              <h2>Crowns and Bridges</h2>
+            </div>
+
+            <div class="img-hover">
+              <div class="title">
+                <h3>
+                  Lorem Ipsum Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Minus minima neque tempora reiciendis.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end all-image -->
+      </div>
+      <!-- end container -->
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+          voluptates?
+        </p>
+        <div class="flex">
+          <div>
+            <div class="fas fa-tooth"></div>
+            <div class="services-card-right">
+              <h3>General Dentistry</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis quis molestiae vitae eligendi at.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+          <div>
+            <div class="fas fa-smile"></div>
+            <div class="services-card-right">
+              <h3>Cosmetic Dentistry</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis quis molestiae vitae eligendi at.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="fas fa-align-center"></div>
+            <div class="services-card-right">
+              <h3>Orthodontics</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis quis molestiae vitae eligendi at.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="fas fa-child"></div>
+            <div class="services-card-right">
+              <h3>Pediatric Dentistry</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis quis molestiae vitae eligendi at.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="fas fa-first-aid"></div>
+            <div class="services-card-right">
+              <h3>Emergency Dental Care</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis quis molestiae vitae eligendi at.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+          <div>
+            <div class="fas fa-shield-alt"></div>
+            <div class="services-card-right">
+              <h3>Preventive Care</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis quis molestiae vitae eligendi at.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonial">
+      <h2>What Our clients Say?</h2>
+      <div id="testim" class="testim">
+        <div class="testim-cover">
+          <div class="wrap">
+            <span
+              id="right-arrow"
+              class="arrow right fa fa-chevron-right"
+            ></span>
+            <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
+            <ul id="testim-dots" class="dots">
+              <li class="dot active"></li>
+              <!--
+                          -->
+              <li class="dot"></li>
+              <!--
+                          -->
+              <li class="dot"></li>
+              <!--
+                          -->
+              <li class="dot"></li>
+              <!--
+                          -->
+              <li class="dot"></li>
+            </ul>
+            <div id="testim-content" class="cont">
+              <div class="active">
+                <div class="img">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1682965455094-a913339699bd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                </div>
+                <h2>Lorem P. Ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+              <div>
+                <div class="img">
+                  <img
+                    src="https://images.unsplash.com/photo-1543933573-1e0a7578328f?q=80&w=1959&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                </div>
+                <h2>Mr. Lorem Ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+              <div>
+                <div class="img">
+                  <img
+                    src="https://images.unsplash.com/photo-1551727974-8af20a3322f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                </div>
+                <h2>Lorem Ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+              <div>
+                <div class="img">
+                  <img
+                    src="https://images.unsplash.com/photo-1611695434369-a8f5d76ceb7b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                </div>
+                <h2>Lorem De Ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+              <div>
+                <div class="img">
+                  <img
+                    src="https://images.unsplash.com/photo-1515515957482-9bfec374dbc4?q=80&w=2082&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                </div>
+                <h2>Ms. Lorem R. Ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                </p>
+              </div>
+
+         
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Need to contact us?</h2>
+
+        <div class="flex">
+          <div id="form-container">
+            <h3>Drop your message for Us</h3>
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" />
+
+              <label for="email">Email</label>
+              <input type="text" id="email" />
+
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" />
+
+              <label for="message">Message</label>
+              <textarea id="message">Write your message here..</textarea>
+
+              <button class="rounded">Send Message</button>
+            </form>
+          </div>
+
+          <div id="address-container">
+            <label>Address</label>
+            <address>Melbourne, VIC- AUSTRALIA</address>
+
+            <label>Phone</label>
+            <p>+61 000-000-0000</p>
+
+            <label>Email Address</label>
+            <a href="#">info@dentalrepairclinic.com.au</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletterdiv">
+      <div class="headings ">
+        <h1 class="font-weight-bold">SUBSCRIBE TO OUR NEWS LETTER</h1>
+      </div>
+      <div class="newsletter-content">
+        <div class="input-group">
+          <input
+            type="text"
+            class="newsletter-input"
+            placeholder="Please provide your Email"
+          />
+          <div class="input-group-append">
+            <span class="input-group-text">Subscribe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footersection" id="footerdiv">
+      <div class="footer-container">
+        <div class="footer-item">
+          <h3>ABOUT ADWEB</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia,
+            et. Architecto maiores illum nam quaerat, rem alias? Quos animi quas
+            dignissimos vero vitae. Libero, et. Nobis doloremque ea culpa
+            necessitatibus! Voluptatem modi fugit ratione quidem laboriosam,
+            dolores non expedita cumque.
+          </p>
+        </div>
+        <div class="footer-item footer-navlinks">
+          <h3>NAVIGATION LINKS</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Price</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h3>NEWSLETTER</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia,
+            et..
+          </p>
+          <div class="input-group">
+            <input
+              type="text"
+              class="newsletter-input"
+              placeholder="Your Email"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text">Subscribe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Copyright &copy;2024 All rights reserved | This template is made by
+          <a href="primedesign.com.au">PrimeDesign</a>
+
+          
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const icons = document.querySelectorAll(".social-icon ul li");
+        icons.forEach((icon, index) => {
+          setTimeout(() => {
+            icon.style.opacity = 1; // Set opacity to 1 to make the icon visible
+          }, index * 500); // Adjust the delay as needed
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll("#destination-slider > div");
+
+        // hide all cards
+        cards.forEach((card) => {
+          card.style.opacity = 0;
+          card.style.transform = "translateY(20px)";
+          card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        });
+
+        // Function to show each card with a sliding animation
+        const showCard = (index) => {
+          if (index < cards.length) {
+            setTimeout(() => {
+              cards[index].style.opacity = 1;
+              cards[index].style.transform = "translateY(0)";
+              showCard(index + 1);
+            }, 200 * index);
+          }
+        };
+
+        // Call the function to start showing the cards
+        showCard(0);
+      });
+
+      // vars
+      ("use strict");
+      var testim = document.getElementById("testim"),
+        testimDots = Array.prototype.slice.call(
+          document.getElementById("testim-dots").children
+        ),
+        testimContent = Array.prototype.slice.call(
+          document.getElementById("testim-content").children
+        ),
+        testimLeftArrow = document.getElementById("left-arrow"),
+        testimRightArrow = document.getElementById("right-arrow"),
+        testimSpeed = 4500,
+        currentSlide = 0,
+        currentActive = 0,
+        testimTimer,
+        touchStartPos,
+        touchEndPos,
+        touchPosDiff,
+        ignoreTouch = 30;
+      window.onload = function () {
+        // Testim Script
+        function playSlide(slide) {
+          for (var k = 0; k < testimDots.length; k++) {
+            testimContent[k].classList.remove("active");
+            testimContent[k].classList.remove("inactive");
+            testimDots[k].classList.remove("active");
+          }
+
+          if (slide < 0) {
+            slide = currentSlide = testimContent.length - 1;
+          }
+
+          if (slide > testimContent.length - 1) {
+            slide = currentSlide = 0;
+          }
+
+          if (currentActive != currentSlide) {
+            testimContent[currentActive].classList.add("inactive");
+          }
+          testimContent[slide].classList.add("active");
+          testimDots[slide].classList.add("active");
+
+          currentActive = currentSlide;
+
+          clearTimeout(testimTimer);
+          testimTimer = setTimeout(function () {
+            playSlide((currentSlide += 1));
+          }, testimSpeed);
+        }
+
+        testimLeftArrow.addEventListener("click", function () {
+          playSlide((currentSlide -= 1));
+        });
+
+        testimRightArrow.addEventListener("click", function () {
+          playSlide((currentSlide += 1));
+        });
+
+        for (var l = 0; l < testimDots.length; l++) {
+          testimDots[l].addEventListener("click", function () {
+            playSlide((currentSlide = testimDots.indexOf(this)));
+          });
+        }
+
+        playSlide(currentSlide);
+
+        // keyboard shortcuts
+        document.addEventListener("keyup", function (e) {
+          switch (e.keyCode) {
+            case 37:
+              testimLeftArrow.click();
+              break;
+
+            case 39:
+              testimRightArrow.click();
+              break;
+
+            case 39:
+              testimRightArrow.click();
+              break;
+
+            default:
+              break;
+          }
+        });
+
+        testim.addEventListener("touchstart", function (e) {
+          touchStartPos = e.changedTouches[0].clientX;
+        });
+
+        testim.addEventListener("touchend", function (e) {
+          touchEndPos = e.changedTouches[0].clientX;
+
+          touchPosDiff = touchStartPos - touchEndPos;
+
+          console.log(touchPosDiff);
+          console.log(touchStartPos);
+          console.log(touchEndPos);
+
+          if (touchPosDiff > 0 + ignoreTouch) {
+            testimLeftArrow.click();
+          } else if (touchPosDiff < 0 - ignoreTouch) {
+            testimRightArrow.click();
+          } else {
+            return;
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
